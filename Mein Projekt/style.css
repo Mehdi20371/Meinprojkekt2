@@ -1,0 +1,17 @@
+h1::after {
+    content: "Lernen Coding";
+
+}
+
+#info {
+    width: 50%;
+    left: 50%;
+}
+
+.img {
+
+    align-self: right;
+    align-self: top;
+    width: 50%;
+
+}

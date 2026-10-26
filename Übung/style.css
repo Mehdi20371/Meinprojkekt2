@@ -1,0 +1,133 @@
+#titel {
+  color: rgb(67, 33, 162);
+}
+
+.box {
+  color: red;
+}
+
+
+* {
+  color: red;
+}
+
+button {
+  background-color: blue;
+  color: white;
+}
+
+button:hover {
+  background-color: red;
+}
+
+button {
+  background-color: blue;
+  transition: background-color 1s;
+}
+
+button:hover {
+  background-color: red;
+}
+
+.text {
+  animation: farbwechsel 5s infinite;
+}
+
+@keyframes farbwechsel {
+  0% {
+    color: rgb(59, 223, 53);
+  }
+
+  50% {
+    color: rgb(133, 13, 21);
+  }
+
+  100% {
+    color: rgb(142, 9, 238);
+  }
+}
+
+#info {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+div:has(> blockquote) {
+  background-color: #ededed;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+#info {
+
+  text-align: center;
+}
+
+.tomato {
+  background-color: Tomato;
+}
+
+.orange {
+  background-color: Orange;
+}
+
+.blue {
+  background-color: DodgerBlue;
+}
+
+.green {
+  background-color: MediumSeaGreen;
+}
+
+.gray {
+  background-color: Gray;
+}
+
+.purple {
+  background-color: SlateBlue;
+}
+
+.violet {
+  background-color: Violet;
+}
+
+.lightgray {
+  background-color: LightGray;
+}
+
+#Mehdi {
+  text-align: center;
+}
+
+.tomato {
+  border: 2px solid Tomato;
+}
+
+.blue {
+  border: 2px solid DodgerBlue;
+}
+
+.violet {
+  border: 2px solid Violet;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+
+}
+
+#info {
+  width: 100%;
+}

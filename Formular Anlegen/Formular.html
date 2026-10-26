@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formular</title>
 </head>
+
 <body>
 
     <h1>Kontaktformular</h1>
 
-    <form action="KHE260483@spergasse.at"
-          method="post"
-          enctype="text/plain">
+    <form action="mailto:KHE260483@spergasse.at" method="post" enctype="text/plain">
 
         <!-- Texteingabe -->
         <label for="name">Name:</label>
-        <input type="text" id="name" name="Name" placeholder="Ihr Name" required>
+        <input type="text" id="name" name="Name" placeholder="Ihr Name" autocomplete="family-name" required>
         <br><br>
+
         <label for="vorname">Vorname:</label>
-        <input type="text" id="vorname" name="Vorname" placeholder="Ihr Vorname" required>
-        
+        <input type="text" id="vorname" name="Vorname" placeholder="Ihr Vorname" autocomplete="given-name" required>
         <br><br>
+
         <!-- E-Mail -->
         <label for="email">E-Mail-Adresse:</label>
-        <input type="email" id="email" name="E-Mail" placeholder="Ihre E-Mail-Adresse" required>
+        <input type="email" id="email" name="E-Mail" placeholder="Ihre E-Mail-Adresse" autocomplete="email" required>
         <br><br>
 
         <!-- Radiobutton -->
-        <p>Geschlecht:</p>
+        <fieldset>
+            <legend>Geschlecht:</legend>
 
-        <input type="radio" id="m" name="Geschlecht" value="Männlich">
-        <label for="m">Männlich</label>
+            <input type="radio" id="m" name="Geschlecht" value="Männlich">
+            <label for="m">Männlich</label>
 
-        <input type="radio" id="w" name="Geschlecht" value="Weiblich">
-        <label for="w">Weiblich</label>
+            <input type="radio" id="w" name="Geschlecht" value="Weiblich">
+            <label for="w">Weiblich</label>
 
-        <input type="radio" id="divers" name="Geschlecht" value="Divers">
-        <label for="divers">Divers</label>
+            <input type="radio" id="divers" name="Geschlecht" value="Divers">
+            <label for="divers">Divers</label>
+        </fieldset>
 
-        <br><br>
+        <br>
 
         <!-- Checkbox -->
         <input type="checkbox" id="agb" name="AGB" value="Akzeptiert" required>
@@ -48,19 +51,20 @@
 
         <!-- Dropdown -->
         <label for="klasse">Klasse:</label>
-        <select id="klasse" name="Klasse">
-            <option value="1">3AKIF</option>
-            <option value="2">2BKIF</option>
-            <option value="3">3CIF</option>
-            <option value="4">3HIF</option>
-            <option value="5">3AIF</option>
+        <select id="klasse" name="Klasse" required>
+            <option value="" disabled selected>Bitte auswählen</option>
+            <option value="3AKIF">3AKIF</option>
+            <option value="2BKIF">2BKIF</option>
+            <option value="3CIF">3CIF</option>
+            <option value="3HIF">3HIF</option>
+            <option value="3AIF">3AIF</option>
         </select>
 
         <br><br>
 
         <!-- Mehrfachauswahl -->
         <label for="interessen">Interessen:</label>
-        <select id="interessen" name="Interessen" multiple>
+        <select id="interessen" name="Interessen" multiple size="4">
             <option value="Programmieren">Programmieren</option>
             <option value="Webdesign">Webdesign</option>
             <option value="Datenbanken">Datenbanken</option>
@@ -71,25 +75,31 @@
 
         <!-- Mehrzeiliges Textfeld -->
         <label for="nachricht">Nachricht:</label><br>
-        <textarea id="nachricht"
-                  name="Nachricht"
-                  rows="6"
-                  cols="50"
-                  placeholder="Geben Sie hier Ihre Nachricht ein..."></textarea>
+        <textarea id="nachricht" name="Nachricht" rows="6" cols="50" placeholder="Geben Sie hier Ihre Nachricht ein..."
+            required></textarea>
 
         <br><br>
 
         <!-- Weiteres Eingabefeld -->
         <label for="telefon">Telefonnummer:</label>
-        <input type="tel" id="telefon" name="Telefonnummer" placeholder="Ihre Telefonnummer">
+        <input type="tel" id="telefon" name="Telefonnummer" placeholder="Ihre Telefonnummer" autocomplete="tel">
 
         <br><br>
 
         <!-- Absenden -->
         <button type="submit">Formular absenden</button>
-
-
     </form>
+    <table>
 
+        <thead>
+            <td>Name</td>
+            <td>alt</td>
+        </thead>
+
+    </table>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis modi vero, vitae quisquam corrupti aspernatur
+        atque, eveniet sed voluptates rerum numquam at blanditiis? Fugiat cupiditate adipisci error voluptas porro
+        expedita!</p>
 </body>
+
 </html>
